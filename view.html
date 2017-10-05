@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>Content Form</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+
+<script type="text/javascript">
+ window.onload=function onLoad(){
+$.ajax(
+    {
+        type: "GET",
+        url: "http://192.168.202.176:8080/load",
+        data: "{}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        cache: false,
+        success: function (data) {
+        var trHTML = '';
+               console.log(data) ;
+               for (var i in data) {
+               	var name=data[i].title;
+               
+               var message=data[i].message;
+               var id=data[i].id;
+               //alert(name);
+  trHTML = trHTML+'<tr><td> <input type="text" class="'+id+'"  disabled value="'+name+'"></td><td><textarea class="'+id+'"  disabled  rows="4" cols="50">' +message+'</textarea></td><td colspan="2"><input type="button"  class="'+id+'" value="Edit" onclick=onEdit("'+id+'")><input type="button" class="'+id+'" value="Delete" onclick=onDelete("'+id+'")></td></tr>';
+}
+$('#add').append(trHTML);
+        
+        },
+        
+        error: function (msg) {
+            
+            alert(msg.responseText);
+        }
+
+})
+}
+
+function onEdit(id){
+ // alert(id+name+message);
+   
+   $("."+id)[0].disabled = false;
+   $("."+id)[1].disabled = false;
+    document.getElementsByClassName(id)[2].value = "Save";
+    document.getElementsByClassName(id)[2].setAttribute("onclick", 'onSave("'+id+'")');
+    document.getElementsByClassName(id)[3].value = "Cancel";
+    document.getElementsByClassName(id)[3].setAttribute("onclick", 'onCancel("'+id+'")');
+
+
+}
+
+function onSave(id){
+ // alert(id+name+message+"saving ");
+ var name=$("."+id)[0].value;
+ var message=$("."+id)[1].value;
+   $.ajax({
+    url: 'http://192.168.202.176:8080/update?id='+id+'&name='+name+'&message='+message,
+    type: 'GET',
+    success: function(result) {
+        location.reload();
+    }
+});
+}
+
+function onCancel(id){
+$("."+id)[0].disabled = true;
+$("."+id)[1].disabled = true;
+       document.getElementsByClassName(id)[2].value = "Edit";
+    document.getElementsByClassName(id)[2].setAttribute("onEdit", 'onEdit("'+id+'")');
+
+    document.getElementsByClassName(id)[3].value = "Delete";
+    document.getElementsByClassName(id)[3].setAttribute("onDelete", 'onCancel("'+id+'")');
+}
+
+
+
+function onDelete(id){
+ if (confirm("Deleting... Are you sure?") == true) {
+      
+       $.ajax({
+    url: 'http://192.168.202.176:8080/ondelete?id='+id,
+    type: 'GET',
+    success: function(result) {
+        location.reload();
+    }
+});
+
+    } else {
+        
+    }
+
+}
+
+</script>
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>Manage Content</h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          
+<th>edit/delete</th>
+        </tr>
+      </thead>
+      <tbody id="add">
+      </tbody>
+    </table>
+
+  </div>
+</body>
+</html>

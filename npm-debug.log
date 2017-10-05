@@ -1,0 +1,220 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', '-g', 'install', 'nodemon' ]
+2 info using npm@2.15.11
+3 info using node@v4.8.4
+4 verbose install initial load of /home/vagrant/.npm-global/lib/package.json
+5 verbose readDependencies loading dependencies from /home/vagrant/.npm-global/lib/package.json
+6 silly cache add args [ 'nodemon', null ]
+7 verbose cache add spec nodemon
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'nodemon',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'nodemon',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed nodemon@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for nodemon
+11 info addNameTag [ 'nodemon', 'latest' ]
+12 silly mapToRegistry name nodemon
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'nodemon',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'nodemon',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/nodemon
+17 verbose addNameTag registry:https://registry.npmjs.org/nodemon not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/nodemon
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 4:44:35 PM
+21 verbose request id 9f9cc2dc6e6e1d65
+22 http request GET https://registry.npmjs.org/nodemon
+23 http 200 https://registry.npmjs.org/nodemon
+24 verbose headers { server: 'nginx/1.10.3',
+24 verbose headers   'content-type': 'application/json',
+24 verbose headers   'last-modified': 'Wed, 04 Oct 2017 11:29:40 GMT',
+24 verbose headers   etag: 'W/"59d4c624-330ba"',
+24 verbose headers   'content-encoding': 'gzip',
+24 verbose headers   'cache-control': 'max-age=300',
+24 verbose headers   'content-length': '22108',
+24 verbose headers   'accept-ranges': 'bytes',
+24 verbose headers   date: 'Wed, 04 Oct 2017 16:44:37 GMT',
+24 verbose headers   via: '1.1 varnish',
+24 verbose headers   age: '72',
+24 verbose headers   connection: 'keep-alive',
+24 verbose headers   'x-served-by': 'cache-sin18026-SIN',
+24 verbose headers   'x-cache': 'HIT',
+24 verbose headers   'x-cache-hits': '1',
+24 verbose headers   'x-timer': 'S1507135477.171662,VS0,VE1',
+24 verbose headers   vary: 'Accept-Encoding, Accept' }
+25 silly get cb [ 200,
+25 silly get   { server: 'nginx/1.10.3',
+25 silly get     'content-type': 'application/json',
+25 silly get     'last-modified': 'Wed, 04 Oct 2017 11:29:40 GMT',
+25 silly get     etag: 'W/"59d4c624-330ba"',
+25 silly get     'content-encoding': 'gzip',
+25 silly get     'cache-control': 'max-age=300',
+25 silly get     'content-length': '22108',
+25 silly get     'accept-ranges': 'bytes',
+25 silly get     date: 'Wed, 04 Oct 2017 16:44:37 GMT',
+25 silly get     via: '1.1 varnish',
+25 silly get     age: '72',
+25 silly get     connection: 'keep-alive',
+25 silly get     'x-served-by': 'cache-sin18026-SIN',
+25 silly get     'x-cache': 'HIT',
+25 silly get     'x-cache-hits': '1',
+25 silly get     'x-timer': 'S1507135477.171662,VS0,VE1',
+25 silly get     vary: 'Accept-Encoding, Accept' } ]
+26 verbose get saving nodemon to /home/vagrant/.npm/registry.npmjs.org/nodemon/.cache.json
+27 verbose correctMkdir /home/vagrant/.npm correctMkdir not in flight; initializing
+28 silly addNameTag next cb for nodemon with tag latest
+29 silly addNamed nodemon@1.12.1
+30 verbose addNamed "1.12.1" is a plain semver version for nodemon
+31 silly mapToRegistry name nodemon
+32 silly mapToRegistry using default registry
+33 silly mapToRegistry registry https://registry.npmjs.org/
+34 silly mapToRegistry data Result {
+34 silly mapToRegistry   raw: 'nodemon',
+34 silly mapToRegistry   scope: null,
+34 silly mapToRegistry   name: 'nodemon',
+34 silly mapToRegistry   rawSpec: '',
+34 silly mapToRegistry   spec: 'latest',
+34 silly mapToRegistry   type: 'tag' }
+35 silly mapToRegistry uri https://registry.npmjs.org/nodemon
+36 verbose addRemoteTarball https://registry.npmjs.org/nodemon/-/nodemon-1.12.1.tgz not in flight; adding
+37 verbose addRemoteTarball [ 'https://registry.npmjs.org/nodemon/-/nodemon-1.12.1.tgz',
+37 verbose addRemoteTarball   '996a56dc49d9f16bbf1b78a4de08f13634b3878d' ]
+38 info retry fetch attempt 1 at 4:44:36 PM
+39 info attempt registry request try #1 at 4:44:36 PM
+40 http fetch GET https://registry.npmjs.org/nodemon/-/nodemon-1.12.1.tgz
+41 http fetch 200 https://registry.npmjs.org/nodemon/-/nodemon-1.12.1.tgz
+42 silly fetchAndShaCheck shasum 996a56dc49d9f16bbf1b78a4de08f13634b3878d
+43 verbose addTmpTarball /tmp/npm-1771-87964014/registry.npmjs.org/nodemon/-/nodemon-1.12.1.tgz not in flight; adding
+44 verbose addTmpTarball already have metadata; skipping unpack for nodemon@1.12.1
+45 verbose correctMkdir /home/vagrant/.npm correctMkdir not in flight; initializing
+46 silly cache afterAdd nodemon@1.12.1
+47 verbose afterAdd /home/vagrant/.npm/nodemon/1.12.1/package/package.json not in flight; writing
+48 verbose correctMkdir /home/vagrant/.npm correctMkdir not in flight; initializing
+49 verbose afterAdd /home/vagrant/.npm/nodemon/1.12.1/package/package.json written
+50 silly install resolved [ { name: 'nodemon',
+50 silly install resolved     homepage: 'http://nodemon.io',
+50 silly install resolved     author: { name: 'Remy Sharp', url: 'http://github.com/remy' },
+50 silly install resolved     bin: { nodemon: './bin/nodemon.js' },
+50 silly install resolved     engines: { node: '>=0.8' },
+50 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/remy/nodemon.git' },
+50 silly install resolved     description: 'Simple monitor script for use during development of a node.js app.',
+50 silly install resolved     keywords:
+50 silly install resolved      [ 'monitor',
+50 silly install resolved        'development',
+50 silly install resolved        'restart',
+50 silly install resolved        'autoload',
+50 silly install resolved        'reload',
+50 silly install resolved        'terminal' ],
+50 silly install resolved     license: 'MIT',
+50 silly install resolved     main: './lib/nodemon',
+50 silly install resolved     scripts:
+50 silly install resolved      { commitmsg: 'commitlint -e',
+50 silly install resolved        coverage: 'istanbul cover _mocha -- --timeout 30000 --ui bdd --reporter list test/**/*.test.js',
+50 silly install resolved        lint: 'jscs lib/**/*.js -v',
+50 silly install resolved        ':spec': 'mocha --timeout 30000 --ui bdd test/**/*.test.js',
+50 silly install resolved        test: 'npm run lint && npm run spec',
+50 silly install resolved        spec: 'for FILE in test/**/*.test.js; do echo $FILE; ./node_modules/.bin/mocha --timeout 30000 $FILE; if [ $? -ne 0 ]; then exit 1; fi; sleep 1; done',
+50 silly install resolved        web: 'node web',
+50 silly install resolved        'semantic-release': 'semantic-release pre && npm publish && semantic-release post' },
+50 silly install resolved     devDependencies:
+50 silly install resolved      { '@commitlint/cli': '^3.1.3',
+50 silly install resolved        '@commitlint/config-angular': '^3.1.1',
+50 silly install resolved        async: '1.4.2',
+50 silly install resolved        'coffee-script': '~1.7.1',
+50 silly install resolved        connect: '~2.19.1',
+50 silly install resolved        husky: '^0.14.3',
+50 silly install resolved        istanbul: '~0.2.10',
+50 silly install resolved        jscs: '2.1.1',
+50 silly install resolved        mocha: '2.3.3',
+50 silly install resolved        'semantic-release': '4.3.5',
+50 silly install resolved        should: '~4.0.0' },
+50 silly install resolved     dependencies:
+50 silly install resolved      { chokidar: '^1.7.0',
+50 silly install resolved        debug: '^2.6.8',
+50 silly install resolved        'es6-promise': '^3.3.1',
+50 silly install resolved        'ignore-by-default': '^1.0.1',
+50 silly install resolved        'lodash.defaults': '^3.1.2',
+50 silly install resolved        minimatch: '^3.0.4',
+50 silly install resolved        'ps-tree': '^1.1.0',
+50 silly install resolved        touch: '^3.1.0',
+50 silly install resolved        undefsafe: '0.0.3',
+50 silly install resolved        'update-notifier': '^2.2.0' },
+50 silly install resolved     version: '1.12.1',
+50 silly install resolved     gitHead: '469fa80aa748041faf97b583728060c1bd482a8e',
+50 silly install resolved     bugs: { url: 'https://github.com/remy/nodemon/issues' },
+50 silly install resolved     _id: 'nodemon@1.12.1',
+50 silly install resolved     _shasum: '996a56dc49d9f16bbf1b78a4de08f13634b3878d',
+50 silly install resolved     _from: 'nodemon@latest',
+50 silly install resolved     _npmVersion: '2.15.12',
+50 silly install resolved     _nodeVersion: '8.5.0',
+50 silly install resolved     _npmUser: { name: 'remy', email: 'remy@leftlogic.com' },
+50 silly install resolved     dist:
+50 silly install resolved      { shasum: '996a56dc49d9f16bbf1b78a4de08f13634b3878d',
+50 silly install resolved        tarball: 'https://registry.npmjs.org/nodemon/-/nodemon-1.12.1.tgz' },
+50 silly install resolved     maintainers: [ [Object] ],
+50 silly install resolved     _npmOperationalInternal:
+50 silly install resolved      { host: 's3://npm-registry-packages',
+50 silly install resolved        tmp: 'tmp/nodemon-1.12.1.tgz_1505457797031_0.8776067900471389' },
+50 silly install resolved     directories: {},
+50 silly install resolved     _resolved: 'https://registry.npmjs.org/nodemon/-/nodemon-1.12.1.tgz' } ]
+51 info install nodemon@1.12.1 into /home/vagrant/.npm-global/lib
+52 info installOne nodemon@1.12.1
+53 verbose installOne of nodemon to /home/vagrant/.npm-global/lib not in flight; installing
+54 verbose correctMkdir /home/vagrant/.npm/_locks correctMkdir not in flight; initializing
+55 verbose lock using /home/vagrant/.npm/_locks/nodemon-6160828322bbc2c3.lock for /home/vagrant/.npm-global/lib/node_modules/nodemon
+56 silly install write writing nodemon 1.12.1 to /home/vagrant/.npm-global/lib/node_modules/nodemon
+57 verbose unbuild lib/node_modules/nodemon
+58 silly gentlyRm /home/vagrant/.npm-global/lib/node_modules/nodemon is being purged from base /home/vagrant/.npm-global
+59 verbose gentlyRm don't care about contents; nuking /home/vagrant/.npm-global/lib/node_modules/nodemon
+60 verbose tar unpack /home/vagrant/.npm/nodemon/1.12.1/package.tgz
+61 verbose tar unpacking to /home/vagrant/.npm-global/lib/node_modules/nodemon
+62 silly gentlyRm /home/vagrant/.npm-global/lib/node_modules/nodemon is being purged
+63 verbose gentlyRm don't care about contents; nuking /home/vagrant/.npm-global/lib/node_modules/nodemon
+64 silly gunzTarPerm modes [ '775', '664' ]
+65 error tar.unpack untar error /home/vagrant/.npm/nodemon/1.12.1/package.tgz
+66 verbose unlock done using /home/vagrant/.npm/_locks/nodemon-6160828322bbc2c3.lock for /home/vagrant/.npm-global/lib/node_modules/nodemon
+67 verbose fstream_path /home/vagrant/.npm-global/lib/node_modules/nodemon
+68 verbose fstream_type Directory
+69 verbose fstream_class DirWriter
+70 verbose stack Error: EACCES: permission denied, mkdir '/home/vagrant/.npm-global/lib/node_modules/nodemon'
+70 verbose stack     at Error (native)
+71 verbose fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+71 verbose fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+71 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+72 verbose cwd /var/www/nestledsu/cmsnodejs
+73 error Linux 4.4.0-62-generic
+74 error argv "/usr/bin/nodejs" "/usr/bin/npm" "-g" "install" "nodemon"
+75 error node v4.8.4
+76 error npm  v2.15.11
+77 error path /home/vagrant/.npm-global/lib/node_modules/nodemon
+78 error code EACCES
+79 error errno -13
+80 error syscall mkdir
+81 error Error: EACCES: permission denied, mkdir '/home/vagrant/.npm-global/lib/node_modules/nodemon'
+81 error     at Error (native)
+81 error  { [Error: EACCES: permission denied, mkdir '/home/vagrant/.npm-global/lib/node_modules/nodemon']
+81 error   errno: -13,
+81 error   code: 'EACCES',
+81 error   syscall: 'mkdir',
+81 error   path: '/home/vagrant/.npm-global/lib/node_modules/nodemon',
+81 error   fstream_type: 'Directory',
+81 error   fstream_path: '/home/vagrant/.npm-global/lib/node_modules/nodemon',
+81 error   fstream_class: 'DirWriter',
+81 error   fstream_stack:
+81 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+81 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+81 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+82 error Please try running this command again as root/Administrator.
+83 verbose exit [ -13, true ]
+84 verbose unbuild lib/node_modules/nodemon
+85 silly gentlyRm /home/vagrant/.npm-global/lib/node_modules/nodemon is being purged from base /home/vagrant/.npm-global
+86 verbose gentlyRm don't care about contents; nuking /home/vagrant/.npm-global/lib/node_modules/nodemon

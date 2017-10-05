@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Welcome to Node CMS</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+</head>
+<body>
+
+       <form name="mform" action="/onRegister"  method="post">
+       <fieldset>
+<legend><h1>Content Form</h1></legend>
+           <center>Title: <input type="text" name="name" id="name" placeholder="Enter your full name" required/></center><br /><br />
+
+   
+            <center>Description:<textarea name="message" id="message" required>Enter your Description here </textarea> </center><br /><br />
+
+
+           <center><input type="submit" id="submit" value="Save"/></center>
+
+       </fieldset>
+   </form>
+       <a href="view">Manage Content</a>
+</body>
+</html>
